@@ -2,7 +2,7 @@
 >build模式要求 “Release”
 >测试的class和function和字段都需要用public (内部调用反射实现)
 
-```
+```c#
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 using MoreLinq;
@@ -20,15 +20,15 @@ public class SimpleTester
 		[GlobalSetup]
 		public void Setup()
 		{
-				testList=Enumerable.Range(1,100).Shuffle(new Random(1334)).ToList();
+			testList=Enumerable.Range(1,100).Shuffle(new Random(1334)).ToList();
 		}
 		
 		[Benchmark(Baseline=true)] //基准线
 		public List<int> ListSort()
 		{
-				var lst=new List<int>(testList);
-				lst.Sort();
-				return lst;
+			var lst=new List<int>(testList);
+			lst.Sort();
+			return lst;
 		}
 		
 		[Benchmark]
@@ -36,13 +36,15 @@ public class SimpleTester
 		//[Argumnets(c,d)] //传参c,d再测一次
 		public List<int> LinqOrderBy()
 		{
-				return testList.OrderBy(x=>x).ToList();
+			return testList.OrderBy(x=>x).ToList();
 		}
 		
 		[Benchmark]
 		public List<int> LinqOrder()
 		{
-				return testList.Order().ToList();
+			return testList.Order().ToList();
 		}
 }
 ```
+
+![[Benchmark result.png]]

@@ -73,8 +73,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -159,6 +158,8 @@
   },
   "active": "7a05b8119415617d",
   "lastOpenFiles": [
+    "assets/Benchmark result.png",
+    "assets",
     "CSharp/BenchmarkDotNet.md",
     "CSharp"
   ]
