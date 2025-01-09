@@ -1,8 +1,10 @@
 {
   "theme": "obsidian",
-  "monospaceFontFamily": "CodeNewRoman Nerd Font Mono,霞鹜文楷等宽 轻便版",
+  "monospaceFontFamily": "CodeNewRoman Nerd Font Mono,苹方,霞鹜文楷等宽 轻便版",
   "interfaceFontFamily": "HarmonyOS Sans SC",
-  "textFontFamily": "霞鹜文楷等宽 轻便版",
+  "textFontFamily": "苹方,霞鹜文楷等宽 轻便版",
   "baseFontSizeAction": true,
-  "accentColor": "#9ec3ff"
+  "accentColor": "#9ec3ff",
+  "baseFontSize": 17,
+  "cssTheme": "Things"
 }
