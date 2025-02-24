@@ -2,7 +2,7 @@
 
 安装程序集`【Pomelo.EntityFrameworkCore.SqlServer】【Microsoft.EntityFrameworkCore.Tools】`
   
-生成migration文件：`Add-Migration <record>  ``
+生成migration文件：`Add-Migration <record> 
 更新数据库：`Update-Database`
 
 ```c#
@@ -13,16 +13,30 @@ public class DataContext :DbContext
         
     }
 
-    public DbSet<Driver>  Drivers { get; set; }
+    public DbSet<Person>  Person { get; set; }
 }
 
 ```
 
 ```c#
+//sqlserver
 builder.Services.AddDbContext<DataContext>(options =>
 {	
-	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+	options.UseSqlServer(
+		builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+//mysql
+builder.Services.AddDbContext<DataContext>(options =>
+	options.UseMySql(
+		builder.Configuration.GetConnectionString("MySqlConnection"),
+		new MySqlServerVersion(new Version(8, 0, 23)
+		)
+	)
+);
+
+builder.Services.AddScoped<DatabaseService>();
+
 ```
 
 ```json
@@ -31,24 +45,41 @@ builder.Services.AddDbContext<DataContext>(options =>
 }
 ```
 
-
-***
-
 ```c#
-public class DataContext :DbContext
+public class DatabaseService
 {
-    portected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-	    optionsBuilder.UseSqlServer(
-		    "Data Source=(localdb);Initial Catelog=formula");
-    }
+	private readonly DataContext _context;
 
-    public DbSet<Driver>  Drivers { get; set; }
+	public DatabaseService(DataContext context)
+	{
+		_context = context;
+	}
+
+	public async Task<List<Person>> GetAllPersonsAsync()
+	{
+		return await _context.Persons.ToListAsync();
+	}
 }
-
 ```
 
 ```c#
-using(DataContext context =new DataContext()){
-	context.Database.EnsureCreated(); //创建数据库和表
+[ApiController]
+[Route("api/[controller]")]
+public class PersonsController : ControllerBase
+{
+	private readonly DatabaseService _databaseService;
+
+	public PersonsController(DatabaseService databaseService)
+	{
+		_databaseService = databaseService;
+	}
+
+	[HttpGet]
+	public async Task<ActionResult<IEnumerable<Person>>> GetPersons()
+	{
+		var persons = await _databaseService.GetAllPersonsAsync();
+		return Ok(persons);
+	}
 }
 ```
+
