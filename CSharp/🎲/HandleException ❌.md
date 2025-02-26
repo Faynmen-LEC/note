@@ -7,33 +7,58 @@ app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 //==================================================
 
-private static Task HandleExceptionAsync(HttpContext context, Exception exception)
+
+public class ExceptionHandlingMiddleware
 {
-    context.Response.ContentType = "application/json";
+	private readonly RequestDelegate _next;
 
-    var statusCode = HttpStatusCode.InternalServerError; // 默认500错误
-
-    if (exception is ArgumentNullException)
+    public ExceptionHandlingMiddleware(RequestDelegate next)
     {
-        statusCode = HttpStatusCode.BadRequest; // 400错误
-    }
-    else if (exception is UnauthorizedAccessException)
-    {
-        statusCode = HttpStatusCode.Unauthorized; // 401错误
+        _next = next;
     }
 
-    context.Response.StatusCode = (int)statusCode;
-
-    var response = new
+    public async Task InvokeAsync(HttpContext context)
     {
-        error = new
+        try
         {
-            message = exception.Message,
-            details = exception.StackTrace
+            // 调用下一个中间件
+            await _next(context);
         }
-    };
-
-    return context.Response.WriteAsJsonAsync(response);
+        catch (Exception ex)
+        {
+            // 处理异常
+            await HandleExceptionAsync(context, ex);
+        }
+    }
+    
+	private static Task HandleExceptionAsync(HttpContext context, Exception exception)
+	{
+	    context.Response.ContentType = "application/json";
+	
+	    var statusCode = HttpStatusCode.InternalServerError; // 默认500错误
+	
+	    if (exception is ArgumentNullException)
+	    {
+	        statusCode = HttpStatusCode.BadRequest; // 400错误
+	    }
+	    else if (exception is UnauthorizedAccessException)
+	    {
+	        statusCode = HttpStatusCode.Unauthorized; // 401错误
+	    }
+	
+	    context.Response.StatusCode = (int)statusCode;
+	
+	    var response = new
+	    {
+	        error = new
+	        {
+	            message = exception.Message,
+	            details = exception.StackTrace
+	        }
+	    };
+	
+	    return context.Response.WriteAsJsonAsync(response);
+	}
 }
 ```
 
