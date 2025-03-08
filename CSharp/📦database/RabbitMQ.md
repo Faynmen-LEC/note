@@ -1,5 +1,5 @@
-***
 
+***
 ```c#
 public async void SendProductMessage<T>(T message)
 {

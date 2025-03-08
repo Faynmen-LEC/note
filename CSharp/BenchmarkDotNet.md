@@ -1,3 +1,4 @@
+
 ***
 >build模式要求 “Release”
 >测试的class和function和字段都需要用public (内部调用反射实现)
