@@ -40,6 +40,17 @@ Console.WriteLine(list.Count);
 var list = db.Queryable<Drivers>().Where(x => x.Id == 1).ToList();
 Console.WriteLine(list[0].ToString());
 
+//并发验证sqlserver时间戳实现乐观锁
+var res = db.Queryable<Drivers>().Where(x => x.Id == 1).ToList();
+var ress = db.Updateable(res).IsEnableUpdateVersionValidation().ExecuteCommand();
+//对应timestamp字段需加上属性
+[SugarColumn(
+	IsEnableUpdateVersionValidation =true,
+	IsOnlyIgnoreInsert=true,
+	IsOnlyIgnoreUpdate =true,
+	ColumnDataType ="timestamp")]
+public byte[] ufts { get; set; }
+
 //联表查询
 var result = db.Queryable<Drivers>()
 			.LeftJoin<Team>((d, t) => d.Team == t.Name).ToList();
