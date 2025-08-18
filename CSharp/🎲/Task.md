@@ -35,6 +35,36 @@ static void Main(string[] args)
 }
 ```
 
+
+task限定并发数
+```c#
+
+var semaphore = new SemaphoreSlim(10, 10);
+var errors = new Dictionary<DataModel, Exception>();
+
+var tasks = dataList.Select(async data =>
+{
+    await semaphore.WaitAsync();
+    try
+    {
+        await _db.Insertable(data).ExecuteCommandAsync();
+    }
+    catch (Exception ex)
+    {
+        errors[data] = ex; 
+    }
+    finally
+    {
+        semaphore.Release();
+    }
+}).ToList();
+    
+await Task.WhenAll(tasks);
+
+```
+
+
+
 task lambda
 ```c#
 var urls=new string[]{
