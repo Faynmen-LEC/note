@@ -26,6 +26,8 @@ body {
   --accent-d: 70%; /* Accent lightness Dark Mode */
   --accent-l: 60%; /* Accent lightness Light Mode */
 
+  --file-line-width: 1200px;
+
   --blue: #2e80f2;
   --pink: #ff82b2;
   --green: #3eb4bf;

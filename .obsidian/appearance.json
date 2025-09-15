@@ -6,5 +6,8 @@
   "baseFontSizeAction": true,
   "accentColor": "#9ec3ff",
   "baseFontSize": 17,
-  "cssTheme": "Things"
+  "cssTheme": "Things",
+  "enabledCssSnippets": [
+    "fay"
+  ]
 }
