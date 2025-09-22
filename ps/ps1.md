@@ -12,6 +12,13 @@ Stop-Process -Id 1234
 Test-NetConnection "127.0.0.1" -Port 1433
 
 
+#获取当前目录下的dll文件名按文件名排序输出到txt
+(Get-ChildItem *.dll | Sort-Object Name).Name > output.txt
+
+```
+
+```powershell
+
 # 测试数据库
 # 定义连接字符串
 $connectionString = "Server=127.0.0.1;Database=Mom_Sys;User ID=sa;Password=123456;"
