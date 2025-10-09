@@ -1,7 +1,8 @@
 
 ***
-```powershell
+# 0.0
 
+```powershell
 #获取notepad进程并停止
 Get-Process -Name notepad
 Stop-Process -Name notepad
@@ -17,8 +18,9 @@ Test-NetConnection "127.0.0.1" -Port 1433
 
 ```
 
-```powershell
+# 数据库
 
+```powershell
 # 测试数据库
 # 定义连接字符串
 $connectionString = "Server=127.0.0.1;Database=Mom_Sys;User ID=sa;Password=123456;"
