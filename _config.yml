@@ -12,10 +12,10 @@ theme: minima # 可以使用默认的 minima 主题，或更换为您喜欢的�
 # 核心配置：定义 Collections
 collections:
   # CSharp 集合
-  csharp_notes:
-    output: true          # 必须为 true
-    label: CSharp         # 告诉 Jekyll 集合的源文件夹是 CSharp
-    permalink: /csharp/:path/ 
+  #csharp_notes:
+    #output: true          # 必须为 true
+    #label: CSharp         # 告诉 Jekyll 集合的源文件夹是 CSharp
+    #permalink: /csharp/:path/ 
     
   # PS 集合 (Powershell)
   ps_notes:
