@@ -1,0 +1,46 @@
+# 站点配置
+title: Fay
+email: your-email@example.com
+description: >- # 在这里填写您的网站描述，将显示在搜索引擎中
+  一个基于 Obsidian 笔记的 Jekyll 博客。
+baseurl: "/note" # 如果您的仓库名是 note，则需要设置 baseurl
+
+# 构建设置
+markdown: kramdown
+theme: minima # 可以使用默认的 minima 主题，或更换为您喜欢的主题
+
+# 核心配置：定义 Collections
+collections:
+  # CSharp 集合
+  csharp_notes:
+    output: true          # 必须为 true
+    label: CSharp         # 告诉 Jekyll 集合的源文件夹是 CSharp
+    permalink: /csharp/:path/ 
+    
+  # PS 集合 (Powershell)
+  ps_notes:
+    output: true          # 必须为 true
+    label: ps             # 告诉 Jekyll 集合的源文件夹是 ps
+    permalink: /ps/:path/     
+
+# 设置默认值 (为上面定义的集合应用布局)
+defaults:
+  # 应用于 CSharp 集合的文件
+  - scope:
+      path: ""
+      type: csharp_notes
+    values:
+      layout: post        # 使用 post 布局
+      
+  # 应用于 PS 集合的文件
+  - scope:
+      path: ""
+      type: ps_notes
+    values:
+      layout: post        # 同样使用 post 布局
+
+# Exclude list 排除列表
+exclude:
+  - README.md
+  - LICENSE
+# ... 其他您不希望被 Jekyll 处理的文件或文件夹
