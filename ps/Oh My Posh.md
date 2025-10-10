@@ -1,6 +1,6 @@
 ---
-title: [OhMyPosh]
-date: [2025-10-9 00:00:00] 
+title: Oh My Posh
+date: 2025-10-09 00:00:00 +0800
 ---
 #### PowerShell (VSCode)
 
