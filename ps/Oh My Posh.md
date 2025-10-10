@@ -1,4 +1,7 @@
-
+---
+title: [OhMyPosh]
+date: [2025-10-9 00:00:00] 
+---
 #### PowerShell (VSCode)
 
 ```powershell
