@@ -3,7 +3,7 @@ title: Faynmen
 
 # 构建设置
 markdown: kramdown
-theme: jekyll-theme-cayman
+theme: jekyll-theme-chirpy
 
 # 核心配置：定义 Collections
 collections:
