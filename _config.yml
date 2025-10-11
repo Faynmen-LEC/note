@@ -4,24 +4,42 @@ title: Faynmen
 # 构建设置
 markdown: kramdown
 theme: jekyll-theme-cayman
-github_button: false
 
 # 核心配置：定义 Collections
 collections:
-  # PS 集合 (Powershell)
-  ps_notes:
-    output: true          # 确保渲染
-    label: ps             # 告诉 Jekyll 源文件夹是 ps
-    permalink: /ps/:path/     
-    
-# 设置默认值 (应用布局)
+  notes:
+    output: true # 确保生成 HTML 文件
+    permalink: /notes/:path/ # 使用文件路径作为永久链接的一部分
+
+# 告诉 Jekyll 哪些目录需要被处理，但请注意：
+# Jekyll Collections 默认只支持顶层目录。
+# 解决办法：使用 defaults 配置和包含/排除，或者直接在 collections 中指定。
+# 对于 GitHub Pages，我们主要依赖 defaults 来设置 Front Matter。
+
+# ------------------------------------
+# 3. 默认 Front Matter (为笔记文件应用布局)
+# ------------------------------------
+# 强制所有在 'folder1' 和 'folder2' 下的文件使用 'post' 布局
 defaults:
-  # 应用于 PS 集合的文件
   - scope:
-      path: ""
-      type: ps_notes      # 必须与 collections 中定义的名称 'ps_notes' 一致
+      path: "ps"
     values:
-      layout: post        # 引用 Minima 主题中的 post 布局
+      layout: "post"
+      collection: "notes" # 确保它们被视为 notes 集合的一部分
+  - scope:
+      path: "CSharp"
+    values:
+      layout: "post"
+      collection: "notes" # 确保它们被视为 notes 集合的一部分
+
+# ------------------------------------
+# 4. Cayman 主题定制 (禁用 GitHub 按钮)
+# ------------------------------------
+# Cayman 主题的 GitHub 按钮是通过一个配置项控制的
+# 我们将它设置为一个空字符串或干脆不设置，以隐藏它
+github: [jekyll-theme-cayman]
+# 明确告诉 Cayman 不要显示按钮
+show_downloads: false
 
 # Exclude list 排除列表
 exclude:
