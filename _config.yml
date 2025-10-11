@@ -32,14 +32,7 @@ defaults:
       layout: "post"
       collection: "notes" # 确保它们被视为 notes 集合的一部分
 
-# ------------------------------------
-# 4. Cayman 主题定制 (禁用 GitHub 按钮)
-# ------------------------------------
-# Cayman 主题的 GitHub 按钮是通过一个配置项控制的
-# 我们将它设置为一个空字符串或干脆不设置，以隐藏它
-github: [jekyll-theme-cayman]
-# 明确告诉 Cayman 不要显示按钮
-show_downloads: false
+
 
 # Exclude list 排除列表
 exclude:
