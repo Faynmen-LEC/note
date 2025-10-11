@@ -1,0 +1,31 @@
+---
+layout: default
+title: 📚 所有笔记文章
+---
+
+<header class="page-header" role="banner">
+    <h1 class="project-name">{{ site.title }}</h1>
+    <h2 class="project-tagline">{{ site.description }}</h2>
+</header>
+
+<section class="main-content">
+    
+    <h2>所有笔记列表 (共 {{ site.notes | size }} 篇)</h2>
+    
+    <ul class="posts-list">
+    {% for note in site.notes %}
+      <li>
+        <h3><a href="{{ note.url | relative_url }}">{{ note.title | default: note.path }}</a></h3>
+        <p>
+            {% if note.date %}
+                <small>发布于: {{ note.date | date: "%Y-%m-%d" }}</small>
+            {% else %}
+                <small>文件路径: {{ note.path | split: "/" | last }}</small>
+            {% endif %}
+        </p>
+      </li>
+    {% endfor %}
+    </ul>
+
+    {% include footer.html %}
+</section>
