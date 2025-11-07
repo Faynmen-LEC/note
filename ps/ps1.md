@@ -1,7 +1,4 @@
----
-title: Power Shell
-date: 2025-10-08 00:00:00 +0800
----
+
 # 0.0
 
 ```powershell
