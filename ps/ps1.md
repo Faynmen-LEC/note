@@ -13,7 +13,7 @@ Test-NetConnection "127.0.0.1" -Port 1433
 
 
 #获取当前目录下的dll文件名按文件名排序输出到txt
-(Get-ChildItem *.dll | Sort-Object Name).Name > output.txt
+> (Get-ChildItem *.dll | Sort-Object Name).Name > output.txt
 
 ```
 
