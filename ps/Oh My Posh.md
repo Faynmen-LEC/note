@@ -21,3 +21,4 @@ oh-my-posh init pwsh | Invoke-Expression
 oh-my-posh init pwsh --config C:\Users\Leclerc\AppData\Local\Programs\oh-my-posh\themes\blue-owl.omp.json | Invoke-Expression
 
 ```
+
