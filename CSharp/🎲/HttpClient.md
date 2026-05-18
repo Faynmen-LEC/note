@@ -4,7 +4,7 @@
 ```c#
 
 
-services.AddHttpClient<IOTService>();
+services.AddHttpClient();
 
 
 public class HttpHelper
@@ -20,7 +20,7 @@ public class HttpHelper
 	{
 		try
 		{
-			using var client = _httpClientFactory?.CreateClient() ?? new HttpClient();
+			var client = _httpClientFactory.CreateClient();
 
 			if (!string.IsNullOrEmpty(token))
 			{
@@ -43,7 +43,7 @@ public class HttpHelper
 	{
 		try
 		{
-			using var client = _httpClientFactory?.CreateClient() ?? new HttpClient();
+			var client = _httpClientFactory.CreateClient();
 
 			if (!string.IsNullOrEmpty(token))
 			{
@@ -66,7 +66,7 @@ public class HttpHelper
 	{
 		try
 		{
-			using var client = _httpClientFactory?.CreateClient() ?? new HttpClient();
+			var client = _httpClientFactory.CreateClient();
 
 			if (!string.IsNullOrEmpty(token))
 			{
