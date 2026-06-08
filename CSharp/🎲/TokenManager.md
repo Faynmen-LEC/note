@@ -70,17 +70,12 @@ public class TokenManager
 			}
 		}
 
-		throw new Exception($"Failed to refresh token after {maxRetries} attempts", lastException);
+		throw lastException;
 	}
 
 	private async Task RefreshTokenAsync()
 	{
 		var tokenData = await GetTokenHttp();
-
-		if (tokenData == null || string.IsNullOrEmpty(tokenData.ACCESS_TOKEN))
-		{
-			throw new Exception("Failed to get access token from third party");
-		}
 
 		_accessToken = tokenData;
 
