@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: ""
+  name: "00"
   text: ""
 
 features:
