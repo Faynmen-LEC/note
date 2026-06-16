@@ -1,6 +1,6 @@
 {
   "spellcheck": false,
-  "attachmentFolderPath": "/assets",
+  "attachmentFolderPath": ".//assets",
   "alwaysUpdateLinks": true,
   "pdfExportSettings": {
     "pageSize": "Letter",
@@ -9,5 +9,6 @@
     "downscalePercent": 100
   },
   "showLineNumber": false,
-  "foldHeading": true
+  "foldHeading": true,
+  "useMarkdownLinks": true
 }
