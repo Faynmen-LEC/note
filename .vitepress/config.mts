@@ -4,7 +4,6 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Faynmen",
   description: "Faynmen_",
-  base: '/note/',  // GitHub Pages 部署时需要设置正确的 base 路径
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],
