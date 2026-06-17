@@ -1,6 +1,6 @@
 
 ***
-[chart.js]([https://www.chartjs.org/docs/latest/](https://www.chartjs.org/docs/latest/))
+[chart.js](https://www.chartjs.org/docs/latest/)
 
 ```html
 <div>

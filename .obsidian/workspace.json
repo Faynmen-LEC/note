@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "329cf8fafc024733",
+    "type": "split",
+    "children": [
+      {
+        "id": "e66e4c1c3401dd75",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "297d71a1fa78689a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Other/LeetCode.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LeetCode"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c98039aaad2c6a72",
+    "type": "split",
+    "children": [
+      {
+        "id": "4d7cf5e5bd750415",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ccc1ab43a6129eae",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "aca4e7092a25a7af",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "e71ecda1dc2c29c6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5d86070ca253e8a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "9054631da5256416",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "deff9c3e31ec8d8f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CSharp/🎲/Filter.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Filter 的反向链接列表"
+            }
+          },
+          {
+            "id": "3ded6757b046286a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CSharp/🎲/Filter.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Filter 的出链列表"
+            }
+          },
+          {
+            "id": "c2f9d99c91edb6b1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "2d6032d85868576b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CSharp/CSharprepl.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "CSharprepl 的大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "297d71a1fa78689a",
+  "lastOpenFiles": [
+    "新建文件夹",
+    "CSharp/BenchmarkDotNet.md",
+    "CSharp/assets/Benchmark result.png",
+    "CSharp/assets",
+    "CSharp/🎲/反射&&特性.md",
+    "CSharp/🎲/assets/Pasted image 20250113105824.png",
+    "CSharp/🎲/assets",
+    "CSharp/🎲/多线程.md",
+    "Other/LeetCode.md",
+    "index.md",
+    "Other/assets/result-1.jpg",
+    "Other/assets",
+    "result-1.jpg",
+    "assets/result-1.jpg",
+    "CSharp/🎲/Filter.md",
+    "CSharp/🎲/单例.md",
+    "CSharp/🎲/递归树.md",
+    "CSharp/CSharprepl.md",
+    "CSharp/🎲/TokenManager.md",
+    "CSharp/🎲/Task.md",
+    "CSharp/🎲/Sort-OrderBy自定义排序.md",
+    "CSharp/加密🔐.md",
+    "CSharp/🎲/HttpClient.md",
+    "my-quartz-site/node_modules/wrap-ansi/readme.md",
+    "my-quartz-site/node_modules/wrap-ansi/package.json",
+    "my-quartz-site/node_modules/wrap-ansi/index.js",
+    "my-quartz-site/node_modules/wrap-ansi/license",
+    "my-quartz-site/node_modules/wrap-ansi/index.d.ts",
+    "my-quartz-site/node_modules/wrap-ansi",
+    "my-quartz-site/node_modules/y18n/build/lib/platform-shims/node.js",
+    "my-quartz-site/node_modules/y18n/build/lib/platform-shims",
+    "my-quartz-site/node_modules/y18n/README.md",
+    "my-quartz-site/node_modules/y18n/CHANGELOG.md",
+    "my-quartz-site/node_modules/function-bind/README.md",
+    "my-quartz-site/node_modules/function-bind/CHANGELOG.md",
+    "my-quartz-site/node_modules/hasown/README.md",
+    "my-quartz-site/node_modules/hasown/CHANGELOG.md",
+    "my-quartz-site/node_modules/color-name/README.md",
+    "my-quartz-site/node_modules/escape-html/Readme.md",
+    "my-quartz-site/node_modules/ms/readme.md",
+    "my-quartz-site/node_modules/ms/license.md",
+    "my-quartz-site/quartz/static/og-image.png",
+    "my-quartz-site/quartz/static/icon.png",
+    "my-quartz-site/docs/images/social-image-preview-light.png",
+    "my-quartz-site/docs/images/social-image-preview-dark.png",
+    "my-quartz-site/docs/images/quartz-layout-tablet.png"
+  ]
+}
