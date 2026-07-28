@@ -5,6 +5,15 @@ export default defineConfig({
   base: "/note/",
   title: "Faynmen",
   description: "Faynmen_",
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "/favicon.ico",
+      },
+    ],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],
