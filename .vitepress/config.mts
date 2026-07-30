@@ -10,7 +10,7 @@ export default defineConfig({
       "link",
       {
         rel: "icon",
-        href: "/favicon.ico",
+        href: "/note/favicon.ico",
       },
     ],
   ],
@@ -47,7 +47,7 @@ export default defineConfig({
               },
               { text: "HttpClient", link: "/CSharp/🎲/HttpClient" },
               { text: "IDisposable", link: "/CSharp/🎲/IDisposable" },
-              { text: "Newtonsoft.Json", link: "/CSharp/🎲/NewtonsoftJson" },
+              { text: "NewtonsoftJson", link: "/CSharp/🎲/NewtonsoftJson" },
               {
                 text: "Sort-OrderBy自定义排序",
                 link: "/CSharp/🎲/Sort-OrderBy自定义排序",
