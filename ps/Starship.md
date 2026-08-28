@@ -16,4 +16,4 @@ starship preset catppuccin-powerline -o ~/.config/starship.toml
 Invoke-Expression (&starship init powershell)
 ```
 
-主题Path：`C:\Users\你的用户名\.config\starship.toml`
+主题Path：`C:\Users\用户名\.config\starship.toml`

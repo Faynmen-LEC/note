@@ -28,7 +28,7 @@ export default defineConfig({
         text: "CSharp",
         items: [
           {
-            text: "基础与特性",
+            text: "📂",
             items: [
               { text: "BenchmarkDotNet", link: "/CSharp/BenchmarkDotNet" },
               { text: "CSharp REPL", link: "/CSharp/CSharprepl" },
@@ -37,7 +37,7 @@ export default defineConfig({
             collapsed: true,
           },
           {
-            text: "核心概念 🎲",
+            text: "🎲",
             items: [
               { text: "Cors", link: "/CSharp/🎲/Cors" },
               { text: "Filter", link: "/CSharp/🎲/Filter" },
@@ -62,7 +62,7 @@ export default defineConfig({
             collapsed: true,
           },
           {
-            text: "数据库 📦",
+            text: "📦",
             items: [
               { text: "ADO.NET", link: "/CSharp/📦database/ADO.NET" },
               { text: "EF", link: "/CSharp/📦database/EF" },
@@ -79,7 +79,7 @@ export default defineConfig({
         text: "FrontEnd",
         items: [
           {
-            text: "JavaScript",
+            text: "JS",
             items: [
               { text: "fetch乱序问题", link: "/FrontEnd/Js/fetch乱序问题" },
               { text: "滚动 load more", link: "/FrontEnd/Js/滚动 load more" },
@@ -109,6 +109,11 @@ export default defineConfig({
           { text: "Starship", link: "/ps/Starship" },
           { text: "ps1", link: "/ps/ps1" },
         ],
+        collapsed: true,
+      },
+      {
+        text: "Framework",
+        items: [{ text: "分布式事务", link: "/Framework/分布式事务" }],
         collapsed: true,
       },
       {
