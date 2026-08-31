@@ -23,7 +23,7 @@ features:
     title: PowerShell
     details:
     link: /ps/Oh My Posh
- -  icon: 🕹️
+  - icon: 🕹️
     title: Framework
     details:
     link: /Framework/分布式事务
