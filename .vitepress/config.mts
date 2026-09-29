@@ -121,6 +121,7 @@ export default defineConfig({
         items: [
           { text: "LeetCode", link: "/Other/LeetCode" },
           { text: "NetWork", link: "/Other/NetWork" },
+          { text: "VSCode", link: "/Other/VSCode" },
         ],
         collapsed: true,
       },
