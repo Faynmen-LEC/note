@@ -9,7 +9,7 @@ Stop-Process -Id 1234
 
 
 #测试端口连接
-Test-NetConnection "127.0.0.1" -Port 1433
+Test-NetConnection [-ComputerName] 127.0.0.1 -Port 1433
 
 
 #获取当前目录下的dll文件名按文件名排序输出到txt
