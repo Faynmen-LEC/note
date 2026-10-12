@@ -1,4 +1,26 @@
 
+
+# 配置
+
+```powershell
+
+#打开配置文件
+notepad $PROFILE
+
+#启用starship
+Invoke-Expression (&starship init powershell)
+
+#自定义函数
+function sql {
+    Write-Host "sc start mssqlserver" -ForegroundColor Yellow
+    sc start mssqlserver
+    }
+
+
+
+
+```
+
 # 0.0
 
 ```powershell
